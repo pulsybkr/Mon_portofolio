@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700;800;900&family=Fraunces:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap');
+
+:root{
+    --text-defaut: 'Fraunces', serif;
+    --text-second: 'Commissioner', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* *******************************header */
+
+header
+{
+    width: 100%;
+    height: 100px;
+}
+
+#main-page
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 25px;
+}
+
+#left-bar
+{
+    width: 30%;
+    position: fixed;
+    right: 5%;
+    top: 25vh;
+}
+
+/* ******************text de la page */
+
+.text-page
+{
+    margin-bottom: 100px;
+}
+
+.text-page h3
+{
+    font-size: 0.8rem;
+    font-family: var(--text-defaut);
+    letter-spacing: 0.2em;
+    color: grey;
+}
+
+
+.text-page h2
+{
+    font-size: 2rem;
+    font-family: var(--text-second);
+    letter-spacing: 0.1em;
+    color: white;
+    margin: 10px 0;
+}
+
+
+.text-page p
+{
+    font-size: 1rem;
+    font-family: var(--text-defaut);
+    color: grey;
+    text-align: justify;
+}
+
+.btn-page
+{
+    padding: 17px 40px;
+    border: 2px solid white;
+}
+
+/* ****************************************** */
+#right-bar
+{
+    width: 60%;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: auto;
+}
+
+.img-first
+{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.img-first img
+{
+    width: 100%;
+}
+
+.img-second
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-second img
+{
+    width: 100%;
+}

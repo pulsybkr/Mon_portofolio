@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700;800;900&family=Fraunces:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap');
+
+:root{
+    --text-defaut: 'Fraunces', serif;
+    --text-second: 'Commissioner', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+/* ************* header ************** */
+
+header
+{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-bar
+{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 50px;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav 
+{
+    margin: 0 40px;
+    cursor: pointer;
+    z-index: 3000;
+}
+
+
+.text-header
+{
+    color: white;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 150px;
+    z-index: 0;
+}
+
+.text-header h1
+{
+    font-size: 5rem;
+    font-family: var(--text-second);
+    letter-spacing: 0.1em;
+    margin-top: 50px;
+}
+
+.text-header h3
+{
+    font-size: 2rem;
+    font-family: var(--text-defaut);
+}
+
+.text-header p
+{
+    font-size: 1.4rem;
+    font-family: var(--text-defaut);
+    z-index: 10;
+    margin-top: 25px;
+}
+
+.text-header p a 
+{
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.5s;
+}
+
+.text-header p a:hover 
+{
+    color: white;
+    text-decoration: line-through;
+}
+ 
+
+
+.back-header
+{
+    position: absolute;
+    right: 0;
+    top: 25%;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+/* **********menu deroulant************* */
+
+#navMenu
+{
+    margin-right: 50px;
+    z-index: 2000;
+    position: relative;
+    padding: 15px 0;
+}
+#navMenu > span
+{
+    display: block;
+    width: 50px;
+    height: 4px;
+    border-radius: 9999px;
+    background-color: rgb(255, 255, 255);
+}
+
+#navMenu > span:not(:last-child){
+    margin-bottom: 8px;
+}
+
+#navMenu, #navMenu > span {
+    transition: all 0.3s ease-in-out;
+}
+
+#navMenu.active {
+    transition-delay: 0.2s;
+    transform: rotate(45deg) 
+}
+
+#navMenu.active > span:nth-child(2)
+{
+    width: 0;
+}
+
+#navMenu.active > span:nth-child(1),
+#navMenu.active > span:nth-child(3){
+transition-delay: 0.2s;
+}
+
+#navMenu.active > span:nth-child(1)
+{
+    transform: translater(9px);
+}
+
+#navMenu.active > span:nth-child(3){
+    transform: translateY(-25px) rotate(90deg);
+}
+
+
+/* ************************* */
+.menu-navi
+{
+    position: absolute;
+    right: 100px;
+    top: 8px;
+    width: 0%;
+    background-color: white;
+    z-index: 2000;
+    padding: 20px 0;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-active
+{
+    width: 95%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+}
+
+.menu-navi ul li 
+{
+    display: inline-block;
+}
+
+.menu-navi ul li a
+{
+    padding: 20px 45px;
+}
+
+
+/* *********************************************** */
+
+main
+{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#about
+{
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+.present
+{
+    margin-bottom: 100px;
+}
+#about h2
+{
+    font-size: 3rem;
+    font-family: var(--text-second);
+    margin-bottom: 25px;
+}
+
+.text-about
+{
+    display: flex;
+    align-items: center;
+}
+
+.text-about  p
+{
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.9em;
+    font-family: var(--text-defaut);
+    width: 60%;
+    margin-right: 25px;
+}
+
+.img-about img
+{
+    width: 100%;
+    opacity: 0.8;
+}
+
+/* ******************* ce que je sais faire */
+
+.ce-que-je-fais
+{
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.ce-que-je-fais h3
+{
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    font-family: var(--text-second);
+}
+
+.jefais
+{
+    width: 80%;
+    float: right;
+}
+
+.contenair-fais
+{
+    margin-bottom: 100px;
+    display: flex;
+} 
+
+.contenair-fais h4
+{
+    width: 320px;
+    font-size: 2rem;
+    font-family: var(--text-second);
+}
+
+.contenair-fais p
+{
+    width: 500px;
+    font-family: var(--text-defaut);
+    line-height: 1.9em;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* ************************ mes outils **************** */
+
+.mes-outils
+{
+    overflow: hidden;
+}
+
+.design 
+{
+   margin-bottom: 50px; 
+}
+
+.mes-outils h3
+{
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    font-family: var(--text-second);
+}
+
+.mes-outils h4
+{
+    font-size: 2rem;
+    font-family: var(--text-second);
+    margin-bottom: 25px;
+}
+
+.mes-outils img
+{
+    width: 100px; 
+    margin-right: 50px;
+}
+
+/* ********************************************** */
+/* **************** mes projets ***************** */
+
+#projet
+{
+    width: 90%;
+    margin-bottom: 100px;
+}
+
+#projet h2
+{
+    font-size: 3rem;
+    font-family: var(--text-second);
+    margin-bottom: 25px;
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
+
+
+.galerie {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    justify-items: center;
+    grid-gap: 20px;
+    position: relative;
+    
+}
+
+.contenair-galerie
+{
+    position: relative;
+    width: 500px;
+    height: 550px;
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.3) ;
+    margin-bottom: 100px;
+}
+
+.contenair-galerie:nth-child(2), .contenair-galerie:nth-child(4), .contenair-galerie:nth-child(6)
+{
+   top: 100px;
+
+}
+
+.text-gal
+{
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    font-size: 1rem;
+    font-family: var(--text-second);
+    letter-spacing: 0.15em;
+}
+
+.btn-gal
+{
+    position: absolute;
+    bottom: -15px;
+    left: 30%;
+    width: 175px;
+    height: 45px;
+    font-family: var(--text-second);
+    letter-spacing: 0.08em;
+    border: none;
+}
+
+.projet-btn
+{
+    width: 250px;
+    height: 60px;
+    font-family: var(--text-second);
+    letter-spacing: 0.08em;
+    border: 2px solid white;
+    background: none;
+    color: white;
+    margin-left: 50px;
+    position: relative;
+    margin-top: 100px;
+}
+
+.projet-btn a 
+{
+    padding: 22px 43px;
+}
+
+
+
+/* ***************** footer ************** */
+hr{
+    color: white;
+    background-color: white;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+footer .log-header
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+footer img
+{
+    width: 100px;
+    margin: 0 50px;
+}
+
+footer p
+{
+    text-align: center;
+    font-family: var(--text-defaut);
+    margin-bottom: 50px;
+}
+
+footer
+{
+    background-color: black;
+    color: white;
+}
+
+body
+{
+    background-color: black;
+}
