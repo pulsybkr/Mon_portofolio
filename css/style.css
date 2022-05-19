@@ -167,14 +167,14 @@ transition-delay: 0.2s;
     z-index: 2000;
     padding: 20px 0;
     display: none;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .menu-active
 {
     width: 95%;
-    display: block;
+    top: 8px;
     display: flex;
     justify-content: center;
     opacity: 1;
@@ -444,4 +444,25 @@ footer
 body
 {
     background-color: black;
+}
+
+/* ************************* cursor */
+body
+{
+    cursor: url('../asset/img/cursor/defaut.png'), auto;
+}
+
+a
+{
+    cursor: url('../asset/img/cursor/link.png'), auto;
+}
+
+.mes-outils img
+{
+    cursor: url('../asset/img/cursor/img.png'), auto;
+}
+
+.mix, .btn-gal
+{
+    cursor: url('../asset/img/cursor/zoom.png'), auto !important;
 }

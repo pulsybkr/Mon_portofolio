@@ -105,7 +105,7 @@ header
 .img-second
 {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,5 +114,23 @@ header
 
 .img-second img
 {
-    width: 100%;
+    width: auto;
+}
+
+/* ************************** */
+
+hr{
+    color: white;
+    background-color: white;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+footer .log-header
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
