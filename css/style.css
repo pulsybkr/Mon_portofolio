@@ -1,5 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;700;800;900&family=Fraunces:ital,wght@0,200;0,300;0,400;0,600;1,300&display=swap');
 
+/* tempory_update */
+.tempory_update{
+    display: none;
+}
+
+#update
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url('../asset/bkg.jpg')center center no-repeat;
+    background-size: cover;
+   
+}
+
+.contentupdate{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.titleupdate h1
+{
+    font-size: 6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titleupdate h3{
+    padding-top: 20px;
+    font-family: sans-serif;
+}
+
+.linkupdate img
+{
+    width: 50px;
+    padding: 20px;
+}
+
+
+/* ******************** */
 :root{
     --text-defaut: 'Fraunces', serif;
     --text-second: 'Commissioner', sans-serif;
